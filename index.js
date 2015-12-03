@@ -51,7 +51,7 @@
    * the `object` has the specified `property`. Does not attempt to fix known
    * issues in older browsers, but does ES6ify the method.
    *
-   * @param {} object The object to test.
+   * @param {!Object} object The object to test.
    * @param {string|Symbol} property The name or Symbol of the property to test.
    * @return {boolean} `true` if the property is set on `object`, else `false`.
    * @example

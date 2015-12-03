@@ -39,7 +39,7 @@ issues in older browsers, but does ES6ify the method.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| object |  | The object to test. |
+| object | <code>Object</code> | The object to test. |
 | property | <code>string</code> &#124; <code>Symbol</code> | The name or Symbol of the property to test. |
 
 **Example**  
