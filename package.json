@@ -1,6 +1,6 @@
 {
   "name": "has-own-property-x",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "hasOwnProperty module.",
   "homepage": "https://github.com/Xotic750/has-own-property-x",
   "author": {
@@ -32,9 +32,9 @@
   },
   "devDependencies": {
     "es5-shim": "^4.4.1",
-    "es6-shim": "^0.34.0",
+    "es6-shim": "^0.34.1",
     "json3": "^3.3.2",
-    "jscs": "^2.7.0",
+    "jscs": "^2.8.0",
     "uglify-js": "^2.6.1",
     "browserify": "^12.0.1",
     "jasmine-node": "^1.14.5",
@@ -45,6 +45,6 @@
     "style": "jscs index.js",
     "docs": "jsdoc2md --name-format --example-lang js index.js > README.md",
     "build": "browserify -e index.js -o lib/has-own-property-x.js -u 'crypto' -s returnExports",
-    "build-uglify": "uglifyjs lib/has-own-property-x.js -o lib/has-own-property-x.min.js --compress unused=false,dead_code=false --keep-fnames --mangle --beautify ascii_only=true,beautify=false --source-map lib/has-own-property-x.map"
+    "build-uglify": "uglifyjs lib/has-own-property-x.js -o lib/has-own-property-x.min.js --compress --keep-fnames --mangle --beautify ascii_only=true,beautify=false --source-map lib/has-own-property-x.map"
   }
 }
