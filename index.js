@@ -41,7 +41,7 @@
  * `es6.shim.js` provides compatibility shims so that legacy JavaScript engines
  * behave as closely as possible to ECMAScript 6 (Harmony).
  *
- * @version 1.0.5
+ * @version 1.0.6
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -54,7 +54,7 @@
   freeze:true, futurehostile:true, latedef:true, newcap:true, nocomma:true,
   nonbsp:true, singleGroups:true, strict:true, undef:true, unused:true,
   es3:true, esnext:false, plusplus:true, maxparams:2, maxdepth:1,
-  maxstatements:3, maxcomplexity:1 */
+  maxstatements:5, maxcomplexity:1 */
 
 /*global module */
 
@@ -62,7 +62,9 @@
   'use strict';
 
   var pHasOwnProperty = Object.prototype.hasOwnProperty;
-  var ES = require('es-abstract/es6');
+  var toObject = require('to-object-x');
+  var toPrimitive = require('es-to-primitive');
+  var safeToString = require('safe-to-string-x');
 
   /**
    * The `hasOwnProperty` method returns a boolean indicating whether
@@ -86,8 +88,8 @@
    */
   module.exports = function hasOwnProperty(object, property) {
     return pHasOwnProperty.call(
-      ES.ToObject(object),
-      ES.ToPropertyKey(property)
+      toObject(object),
+      safeToString(toPrimitive(property, String))
     );
   };
 }());
