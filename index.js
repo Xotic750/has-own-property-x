@@ -41,7 +41,7 @@
  * `es6.shim.js` provides compatibility shims so that legacy JavaScript engines
  * behave as closely as possible to ECMAScript 6 (Harmony).
  *
- * @version 1.0.4
+ * @version 1.0.5
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -54,15 +54,15 @@
   freeze:true, futurehostile:true, latedef:true, newcap:true, nocomma:true,
   nonbsp:true, singleGroups:true, strict:true, undef:true, unused:true,
   es3:true, esnext:false, plusplus:true, maxparams:2, maxdepth:1,
-  maxstatements:2, maxcomplexity:1 */
+  maxstatements:3, maxcomplexity:1 */
 
 /*global module */
 
 ;(function () {
   'use strict';
 
-  var pHasOwnProperty = Object.prototype.hasOwnProperty,
-    ES = require('es-abstract/es6');
+  var pHasOwnProperty = Object.prototype.hasOwnProperty;
+  var ES = require('es-abstract/es6');
 
   /**
    * The `hasOwnProperty` method returns a boolean indicating whether
@@ -77,7 +77,7 @@
    * var o = {
    *   foo: 'bar'
    * };
-   }
+   *
    *
    * hasOwnProperty(o, 'bar'); // false
    * hasOwnProperty(o, 'foo'); // true
@@ -85,10 +85,9 @@
    *                   // TypeError: Cannot convert undefined or null to object
    */
   module.exports = function hasOwnProperty(object, property) {
-    return ES.Call(
-      pHasOwnProperty,
-      ES.ToObject(ES.RequireObjectCoercible(object)),
-      [property]
+    return pHasOwnProperty.call(
+      ES.ToObject(object),
+      ES.ToPropertyKey(property)
     );
   };
 }());

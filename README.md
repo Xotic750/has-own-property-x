@@ -41,7 +41,7 @@ es5-shim.js to be able to work properly.
 `es6.shim.js` provides compatibility shims so that legacy JavaScript engines
 behave as closely as possible to ECMAScript 6 (Harmony).
 
-**Version**: 1.0.4  
+**Version**: 1.0.5  
 **Author:** Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
@@ -65,7 +65,7 @@ var hasOwnProperty = require('has-own-property-x');
 var o = {
   foo: 'bar'
 };
-   }
+
 
 hasOwnProperty(o, 'bar'); // false
 hasOwnProperty(o, 'foo'); // true
