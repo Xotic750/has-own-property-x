@@ -63,7 +63,7 @@
 
   var pHasOwnProperty = Object.prototype.hasOwnProperty;
   var toObject = require('to-object-x');
-  var toPrimitive = require('es-to-primitive');
+  var toPrimitive = require('es-to-primitive/es6');
   var safeToString = require('safe-to-string-x');
 
   /**
