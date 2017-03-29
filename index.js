@@ -28,7 +28,7 @@
  *
  * @see {@link http://www.ecma-international.org/ecma-262/6.0/#sec-hasownproperty|7.3.11 HasOwnProperty (O, P)}
  *
- * @version 1.1.1
+ * @version 1.2.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -46,6 +46,7 @@
   var toObject = require('to-object-x');
   var toPrimitive = require('es-to-primitive/es6');
   var safeToString = require('safe-to-string-x');
+  var hop = Object.prototype.hasOwnProperty;
 
   /**
    * The `hasOwnProperty` method returns a boolean indicating whether
@@ -68,6 +69,6 @@
    *                   // TypeError: Cannot convert undefined or null to object
    */
   module.exports = function hasOwnProperty(object, property) {
-    return Object.prototype.hasOwnProperty.call(toObject(object), safeToString(toPrimitive(property, String)));
+    return hop.call(toObject(object), safeToString(toPrimitive(property, String)));
   };
 }());
