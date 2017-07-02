@@ -28,47 +28,40 @@
  *
  * @see {@link http://www.ecma-international.org/ecma-262/6.0/#sec-hasownproperty|7.3.11 HasOwnProperty (O, P)}
  *
- * @version 1.2.0
+ * @version 1.3.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
  * @module has-own-property-x
  */
 
-/* eslint strict: 1 */
+'use strict';
 
-/* global module */
+var toObject = require('to-object-x');
+var toPrimitive = require('es-to-primitive/es6');
+var safeToString = require('safe-to-string-x');
+var hop = Object.prototype.hasOwnProperty;
 
-;(function () { // eslint-disable-line no-extra-semi
-
-  'use strict';
-
-  var toObject = require('to-object-x');
-  var toPrimitive = require('es-to-primitive/es6');
-  var safeToString = require('safe-to-string-x');
-  var hop = Object.prototype.hasOwnProperty;
-
-  /**
-   * The `hasOwnProperty` method returns a boolean indicating whether
-   * the `object` has the specified `property`. Does not attempt to fix known
-   * issues in older browsers, but does ES6ify the method.
-   *
-   * @param {!Object} object The object to test.
-   * @param {string|Symbol} property The name or Symbol of the property to test.
-   * @return {boolean} `true` if the property is set on `object`, else `false`.
-   * @example
-   * var hasOwnProperty = require('has-own-property-x');
-   * var o = {
-   *   foo: 'bar'
-   * };
-   *
-   *
-   * hasOwnProperty(o, 'bar'); // false
-   * hasOwnProperty(o, 'foo'); // true
-   * hasOwnProperty(undefined, 'foo');
-   *                   // TypeError: Cannot convert undefined or null to object
-   */
-  module.exports = function hasOwnProperty(object, property) {
-    return hop.call(toObject(object), safeToString(toPrimitive(property, String)));
-  };
-}());
+/**
+ * The `hasOwnProperty` method returns a boolean indicating whether
+ * the `object` has the specified `property`. Does not attempt to fix known
+ * issues in older browsers, but does ES6ify the method.
+ *
+ * @param {!Object} object - The object to test.
+ * @param {string|Symbol} property - The name or Symbol of the property to test.
+ * @returns {boolean} `true` if the property is set on `object`, else `false`.
+ * @example
+ * var hasOwnProperty = require('has-own-property-x');
+ * var o = {
+ *   foo: 'bar'
+ * };
+ *
+ *
+ * hasOwnProperty(o, 'bar'); // false
+ * hasOwnProperty(o, 'foo'); // true
+ * hasOwnProperty(undefined, 'foo');
+ *                   // TypeError: Cannot convert undefined or null to object
+ */
+module.exports = function hasOwnProperty(object, property) {
+  return hop.call(toObject(object), safeToString(toPrimitive(property, String)));
+};

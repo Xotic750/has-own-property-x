@@ -28,7 +28,7 @@ Used to determine whether an object has an own property with the specified prope
 Requires ES3 or above.
 
 **See**: [7.3.11 HasOwnProperty (O, P)](http://www.ecma-international.org/ecma-262/6.0/#sec-hasownproperty)  
-**Version**: 1.2.0  
+**Version**: 1.3.0  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
