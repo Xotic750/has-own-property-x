@@ -1,34 +1,30 @@
-<a name="module_has-own-property-x"></a>
-
-## has-own-property-x
 <a href="https://travis-ci.org/Xotic750/has-own-property-x"
-title="Travis status">
+   title="Travis status">
 <img
-src="https://travis-ci.org/Xotic750/has-own-property-x.svg?branch=master"
-alt="Travis status" height="18">
+   src="https://travis-ci.org/Xotic750/has-own-property-x.svg?branch=master"
+   alt="Travis status" height="18"/>
 </a>
 <a href="https://david-dm.org/Xotic750/has-own-property-x"
-title="Dependency status">
+   title="Dependency status">
 <img src="https://david-dm.org/Xotic750/has-own-property-x.svg"
-alt="Dependency status" height="18"/>
+   alt="Dependency status" height="18"/>
 </a>
-<a
-href="https://david-dm.org/Xotic750/has-own-property-x#info=devDependencies"
-title="devDependency status">
+<a href="https://david-dm.org/Xotic750/has-own-property-x#info=devDependencies"
+   title="devDependency status">
 <img src="https://david-dm.org/Xotic750/has-own-property-x/dev-status.svg"
-alt="devDependency status" height="18"/>
+   alt="devDependency status" height="18"/>
 </a>
 <a href="https://badge.fury.io/js/has-own-property-x" title="npm version">
 <img src="https://badge.fury.io/js/has-own-property-x.svg"
-alt="npm version" height="18">
+   alt="npm version" height="18"/>
 </a>
+<a name="module_has-own-property-x"></a>
 
+## has-own-property-x
 Used to determine whether an object has an own property with the specified property key.
 
-Requires ES3 or above.
-
 **See**: [7.3.11 HasOwnProperty (O, P)](http://www.ecma-international.org/ecma-262/6.0/#sec-hasownproperty)  
-**Version**: 1.3.0  
+**Version**: 2.0.0  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
