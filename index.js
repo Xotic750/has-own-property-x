@@ -1,7 +1,7 @@
 /**
  * @file Used to determine whether an object has an own property with the specified property key.
  * @see {@link http://www.ecma-international.org/ecma-262/6.0/#sec-hasownproperty|7.3.11 HasOwnProperty (O, P)}
- * @version 2.0.0
+ * @version 3.0.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -11,9 +11,7 @@
 'use strict';
 
 var toObject = require('to-object-x');
-var toPrimitive = require('es-to-primitive/es6');
-var safeToString = require('safe-to-string-x');
-var isSymbol = require('is-symbol');
+var toPropertyKey = require('to-property-key-x');
 var hop = Object.prototype.hasOwnProperty;
 
 /**
@@ -37,7 +35,5 @@ var hop = Object.prototype.hasOwnProperty;
  *                   // TypeError: Cannot convert undefined or null to object
  */
 module.exports = function hasOwnProperty(object, property) {
-  var prop = isSymbol(property) ? property : safeToString(toPrimitive(property, String));
-
-  return hop.call(toObject(object), prop);
+  return hop.call(toObject(object), toPropertyKey(property));
 };

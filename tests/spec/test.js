@@ -71,9 +71,15 @@ describe('hasOwnProperty', function () {
 
   itHasSymbolSupport('symbol', function () {
     var s = Symbol('s');
-    var o = {};
-    o[s] = 'bar';
+    var o1 = {};
+    o1[s] = 'bar';
 
-    expect(hasOwnProperty(o, s)).toBe(true);
+    expect(hasOwnProperty(o1, s)).toBe(true);
+
+    var os = Object(s);
+    var o2 = {};
+    o2[os] = 'bar';
+
+    expect(hasOwnProperty(o2, s)).toBe(true);
   });
 });
