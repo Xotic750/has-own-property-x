@@ -1,6 +1,6 @@
 {
   "name": "has-own-property-x",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Used to determine whether an object has an own property with the specified property key.",
   "homepage": "https://github.com/Xotic750/has-own-property-x",
   "author": {
