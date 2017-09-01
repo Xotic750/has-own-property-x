@@ -24,7 +24,7 @@
 Used to determine whether an object has an own property with the specified property key.
 
 **See**: [7.3.11 HasOwnProperty (O, P)](http://www.ecma-international.org/ecma-262/6.0/#sec-hasownproperty)  
-**Version**: 3.1.0  
+**Version**: 3.1.1  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
@@ -37,6 +37,10 @@ issues in older browsers, but does ES6ify the method.
 
 **Kind**: Exported function  
 **Returns**: <code>boolean</code> - `true` if the property is set on `object`, else `false`.  
+**Throws**:
+
+- <code>TypeError</code> If object is null or undefined.
+
 
 | Param | Type | Description |
 | --- | --- | --- |

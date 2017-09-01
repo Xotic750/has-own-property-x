@@ -1,7 +1,7 @@
 /**
  * @file Used to determine whether an object has an own property with the specified property key.
  * @see {@link http://www.ecma-international.org/ecma-262/6.0/#sec-hasownproperty|7.3.11 HasOwnProperty (O, P)}
- * @version 3.1.0
+ * @version 3.1.1
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -20,6 +20,7 @@ var hop = Object.prototype.hasOwnProperty;
  * issues in older browsers, but does ES6ify the method.
  *
  * @param {!Object} object - The object to test.
+ * @throws {TypeError} If object is null or undefined.
  * @param {string|Symbol} property - The name or Symbol of the property to test.
  * @returns {boolean} `true` if the property is set on `object`, else `false`.
  * @example
