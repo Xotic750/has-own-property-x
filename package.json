@@ -51,7 +51,7 @@
   "dependencies": {
     "cached-constructors-x": "^2.0.4",
     "to-object-x": "^2.0.1",
-    "to-property-key-x": "^3.0.1"
+    "to-property-key-x": "^3.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
