@@ -49,9 +49,9 @@
     "url": "https://github.com/Xotic750/has-own-property-x/issues"
   },
   "dependencies": {
-    "cached-constructors-x": "^2.0.3",
-    "to-object-x": "^2.0.0",
-    "to-property-key-x": "^2.0.2"
+    "cached-constructors-x": "^2.0.4",
+    "to-object-x": "^2.0.1",
+    "to-property-key-x": "^3.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
