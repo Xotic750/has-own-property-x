@@ -21,16 +21,13 @@
 <a name="module_has-own-property-x"></a>
 
 ## has-own-property-x
+
 Used to determine whether an object has an own property with the specified property key.
 
-**See**: [7.3.11 HasOwnProperty (O, P)](http://www.ecma-international.org/ecma-262/6.0/#sec-hasownproperty)  
-**Version**: 3.2.0  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_has-own-property-x--module.exports"></a>
 
 ### `module.exports(object, property)` ⇒ <code>boolean</code> ⏏
+
 The `hasOwnProperty` method returns a boolean indicating whether
 the `object` has the specified `property`. Does not attempt to fix known
 issues in older browsers, but does ES6ify the method.
@@ -41,22 +38,21 @@ issues in older browsers, but does ES6ify the method.
 
 - <code>TypeError</code> If object is null or undefined.
 
-
-| Param | Type | Description |
-| --- | --- | --- |
-| object | <code>Object</code> | The object to test. |
+| Param    | Type                                       | Description                                 |
+| -------- | ------------------------------------------ | ------------------------------------------- |
+| object   | <code>Object</code>                        | The object to test.                         |
 | property | <code>string</code> \| <code>Symbol</code> | The name or Symbol of the property to test. |
 
-**Example**  
+**Example**
+
 ```js
-var hasOwnProperty = require('has-own-property-x');
-var o = {
-  foo: 'bar'
+import hasOwnProperty from 'has-own-property-x';
+
+const o = {
+  foo: 'bar',
 };
 
-
-hasOwnProperty(o, 'bar'); // false
-hasOwnProperty(o, 'foo'); // true
-hasOwnProperty(undefined, 'foo');
-                  // TypeError: Cannot convert undefined or null to object
+console.log(hasOwnProperty(o, 'bar')); // false
+console.log(hasOwnProperty(o, 'foo')); // true
+hasOwnProperty(undefined, 'foo'); // TypeError: Cannot convert undefined or null to object
 ```
