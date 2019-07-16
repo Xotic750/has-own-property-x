@@ -1,7 +1,6 @@
 import noop from 'lodash/noop';
 import hasOwnProperty from '../src/has-own-property-x';
 
-/* eslint-disable-next-line compat/compat */
 const hasSymbolSupport = typeof Symbol === 'function' && typeof Symbol('') === 'symbol';
 const itHasSymbolSupport = hasSymbolSupport ? it : xit;
 
@@ -13,7 +12,6 @@ describe('hasOwnProperty', function() {
     }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
-      /* eslint-disable-next-line no-void */
       hasOwnProperty(void 0);
     }).toThrowErrorMatchingSnapshot();
 
@@ -43,7 +41,7 @@ describe('hasOwnProperty', function() {
     expect(hasOwnProperty(o, 'bar')).toBe(false);
     expect(hasOwnProperty(o, 'propertyIsEnumerable')).toBe(false);
     expect(hasOwnProperty(o)).toBe(false);
-    /* eslint-disable-next-line no-void */
+
     expect(hasOwnProperty(o, void 0)).toBe(false);
     expect(hasOwnProperty(o, null)).toBe(false);
     expect(hasOwnProperty(o, 1)).toBe(false);
@@ -58,7 +56,7 @@ describe('hasOwnProperty', function() {
 
   itHasSymbolSupport('symbol', function() {
     expect.assertions(2);
-    /* eslint-disable-next-line compat/compat */
+
     const s = Symbol('s');
     const o = {};
     o[s] = 'bar';
