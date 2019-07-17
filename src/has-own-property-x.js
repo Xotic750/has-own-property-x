@@ -13,6 +13,8 @@ const hop = {}.hasOwnProperty;
  * @param {string|Symbol} property - The name or Symbol of the property to test.
  * @returns {boolean} `true` if the property is set on `object`, else `false`.
  */
-export default function hasOwnProperty(object, property) {
+const hasOwnProperty = function hasOwnProperty(object, property) {
   return hop.call(toObject(object), toPropertyKey(property));
-}
+};
+
+export default hasOwnProperty;

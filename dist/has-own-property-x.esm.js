@@ -12,8 +12,10 @@ var hop = {}.hasOwnProperty;
  * @returns {boolean} `true` if the property is set on `object`, else `false`.
  */
 
-export default function hasOwnProperty(object, property) {
+var hasOwnProperty = function hasOwnProperty(object, property) {
   return hop.call(toObject(object), toPropertyKey(property));
-}
+};
+
+export default hasOwnProperty;
 
 //# sourceMappingURL=has-own-property-x.esm.js.map
