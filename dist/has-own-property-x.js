@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-07-19T22:04:24.272Z",
+  "date": "2019-07-21T22:53:20.758Z",
   "describe": "",
   "description": "Used to determine whether an object has an own property with the specified property key.",
   "file": "has-own-property-x.js",
   "hash": "fca90cea5fa2854fc5c3",
   "license": "MIT",
-  "version": "4.0.8"
+  "version": "4.0.9"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
