@@ -10,7 +10,7 @@ const hop = {}.hasOwnProperty;
  *
  * @param {!object} object - The object to test.
  * @throws {TypeError} If object is null or undefined.
- * @param {string|number|Symbol} property - The name or Symbol of the property to test.
+ * @param {string|number|symbol} property - The name or Symbol of the property to test.
  * @returns {boolean} `true` if the property is set on `object`, else `false`.
  */
 const hasOwnProperty = function hasOwnProperty(object, property) {

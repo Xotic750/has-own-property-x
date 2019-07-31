@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-07-29T19:28:43.395Z",
+  "date": "2019-07-31T16:09:29.395Z",
   "describe": "",
   "description": "Used to determine whether an object has an own property with the specified property key.",
   "file": "has-own-property-x.js",
-  "hash": "0b26dd34b28e80e7cb2f",
+  "hash": "65c5a78b9e21e9d6b289",
   "license": "MIT",
   "version": "4.0.16"
 }
@@ -1242,7 +1242,7 @@ var hop = {}.hasOwnProperty;
  *
  * @param {!object} object - The object to test.
  * @throws {TypeError} If object is null or undefined.
- * @param {string|number|Symbol} property - The name or Symbol of the property to test.
+ * @param {string|number|symbol} property - The name or Symbol of the property to test.
  * @returns {boolean} `true` if the property is set on `object`, else `false`.
  */
 
