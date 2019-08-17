@@ -52,7 +52,8 @@
   },
   "dependencies": {
     "to-object-x": "^2.2.0",
-    "to-property-key-x": "^3.1.0"
+    "to-property-key-x": "^3.1.0",
+    "simple-methodize-x": "^1.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

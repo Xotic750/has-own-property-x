@@ -1,7 +1,8 @@
 import toObject from 'to-object-x';
 import toPropertyKey from 'to-property-key-x';
+import methodize from 'simple-methodize-x';
 
-const hop = {}.hasOwnProperty;
+const hop = methodize({}.hasOwnProperty);
 
 /**
  * The `hasOwnProperty` method returns a boolean indicating whether
@@ -14,7 +15,7 @@ const hop = {}.hasOwnProperty;
  * @returns {boolean} `true` if the property is set on `object`, else `false`.
  */
 const hasOwnProperty = function hasOwnProperty(object, property) {
-  return hop.call(toObject(object), toPropertyKey(property));
+  return hop(toObject(object), toPropertyKey(property));
 };
 
 export default hasOwnProperty;

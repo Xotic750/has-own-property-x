@@ -1,6 +1,7 @@
 import toObject from 'to-object-x';
 import toPropertyKey from 'to-property-key-x';
-var hop = {}.hasOwnProperty;
+import methodize from 'simple-methodize-x';
+var hop = methodize({}.hasOwnProperty);
 /**
  * The `hasOwnProperty` method returns a boolean indicating whether
  * the `object` has the specified `property`. Does not attempt to fix known
@@ -13,7 +14,7 @@ var hop = {}.hasOwnProperty;
  */
 
 var hasOwnProperty = function hasOwnProperty(object, property) {
-  return hop.call(toObject(object), toPropertyKey(property));
+  return hop(toObject(object), toPropertyKey(property));
 };
 
 export default hasOwnProperty;
