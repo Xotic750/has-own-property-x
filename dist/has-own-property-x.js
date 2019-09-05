@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-09-04T23:32:51.287Z",
+  "date": "2019-09-05T19:41:32.159Z",
   "describe": "",
   "description": "Used to determine whether an object has an own property with the specified property key.",
   "file": "has-own-property-x.js",
